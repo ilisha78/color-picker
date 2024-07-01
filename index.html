@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        *{
+            box-sizing: content-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(166, 230, 230);
+            width: 30%;
+            height: 60%;
+            border-radius: 20px;
+        }
+        #box{
+            width: 80%;
+            height: 30%;
+            /* background-color: white; */
+            border: 1px solid #000;
+        }
+        #color{
+            width: 60%;
+        }
+        .colors{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1 fr;
+            gap: 40px;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        .circle{
+            padding: 25px 16px;
+            z-index: 2;
+            width: 80%;
+            border-radius: 50%;
+            border: 1px solid rgb(117, 116, 116);
+        }
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box"></div>
+
+            <input type="color" name="color" id="color" title="color">
+            <div class="colors">
+                <div class="circle" id="red"></div>
+                <div class="circle" id="yellow"></div>
+                <div class="circle" id="pink"></div>
+                <div class="circle" id="blue"></div>
+                <div class="circle" id="green"></div>
+                <div class="circle" id="purple"></div>
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
